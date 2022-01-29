@@ -1,0 +1,26 @@
+#User function Template for python3
+
+class Solution:
+    def secFrequent(self, arr, n):
+        d={}
+        for word in arr:
+            if word not in d:
+                d[word]=1
+            else:
+                d[word]+=1
+        maxValue=0
+        maxKey=""
+        for key in d.keys():
+            if d[key]>maxValue:
+                maxValue=d[key]
+                maxKey=key
+        del d[maxKey]
+        maxValue=0
+        maxKey=""
+        for key in d.keys():
+            if d[key]>maxValue:
+                maxValue=d[key]
+                maxKey=key
+                
+        return maxKey
+                
