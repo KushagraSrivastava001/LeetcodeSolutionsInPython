@@ -1,0 +1,15 @@
+class Solution:
+    def Anagrams(self, words, n):
+        d={}             
+        for word in words:
+            key=''.join(sorted(list(word)))
+            if key not in d:
+                d[key]=[word]
+            else:
+                d[key].append(word)
+        return sorted(list(d.values()))
+        
+        #code here
+algorithm
+first make a dictionary
+then iterate the character array
